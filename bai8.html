@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button id="Choi" onclick="choithoi()">Chơi</button>
+<button id="lai" onclick="choithoi()">Nốt lần này thôi!</button>
+
+<script>
+    function choithoi () {
+        let min = +prompt("Nhập vào số min: ");
+        let max = +prompt("Nhập vào số max: ");
+        let ngaunhien = Math.round(Math.random() * (max - min + 1)) + min;
+        for (let i = 1; i <=3; i++) {
+            let doan = +prompt("Đoán xem ahihi: ");
+            if (doan > ngaunhien) {
+                alert("Lớn hơn rồi! Đoán lại đê...");
+            } else if (doan < ngaunhien) {
+                alert ("Nhỏ hơn rồi! LeuLeu =))) Đoán lại đê...");
+            } else if (doan == ngaunhien) {
+                alert("Lụm tiền =)))")
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
